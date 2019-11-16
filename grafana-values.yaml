@@ -1,0 +1,45 @@
+sidecar:
+  dashboards:
+    enabled: true
+    label: grafana_dashboard
+
+persistence:
+  enabled: true
+  existingClaim: "grafana-pvc"
+
+dashboardProviders:
+  dashboardproviders.yaml:
+    apiVersion: 1
+    providers:
+    - name: 'default'  # corresponds to the defaultDashboards.
+      orgId: 1
+      folder: 'Kubernetes'
+      type: file
+      disableDeletion: true
+      editable: false
+      options:
+        path: /tmp/dashboards/default  # should match sidecar.dashboards.defaultFolderName
+    - name: 'global'
+      orgId: 1
+      folder: 'All teams'
+      type: file
+      disableDeletion: true
+      editable: false
+      options:
+        path: /tmp/dashboards/global
+    - name: 'accounts'
+      orgId: 1
+      folder: 'Accounts'
+      type: file
+      disableDeletion: true
+      editable: false
+      options:
+        path: /tmp/dashboards/accounts
+    - name: 'team-1'
+      orgId: 1
+      folder: 'Team-1'
+      type: file
+      disableDeletion: true
+      editable: false
+      options:
+        path: /tmp/dashboards/team-1

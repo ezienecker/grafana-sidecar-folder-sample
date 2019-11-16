@@ -2,7 +2,7 @@
 
 Installs the web dashboarding system https://grafana.com/[Grafana] with sidecar support. Additionally add dashboards from configmaps to specific folders in grafana.
 
-Tested with Chart stable/grafana --Version 
+Tested with Chart `stable/grafana` Version: `6.4.2`
 
 == Create the PersistentVolume
 

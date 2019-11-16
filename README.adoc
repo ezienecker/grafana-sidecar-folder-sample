@@ -14,7 +14,7 @@ Tested with Chart stable/grafana --Version
 
 == Create the ConfigMaps
 
-`kubectl apply -f configmaps/ezi-dashboard-cm.yaml`
+`kubectl apply -f configmaps/account-dashboard-cm.yaml`
 
 `kubectl apply -f configmaps/team-1-dashboard-cm.yaml`
 
@@ -52,7 +52,5 @@ metadata:
   annotations:
     k8s-sidecar-target-directory: "/tmp/dashboards/new-team"
 ```
-
-In der Annotation legt man den Ordner fest (Dieser muss mittels der dashboardProviders bereits vorhanden sein!).
 
 In the annotation `k8s-sidecar-target-directory`, you specify the folder (the folder must already present in the `dashboardProviders`).

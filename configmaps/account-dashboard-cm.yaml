@@ -124,4 +124,4 @@ metadata:
     grafana_dashboard: "1"
   annotations:
     k8s-sidecar-target-directory: "/tmp/dashboards/accounts"
-  name: ezi-dashboard-cm
+  name: account-dashboard-cm
